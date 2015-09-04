@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
 
 
-  resources :characters
-  resources :players
+  
+  resources :players do 
+    resources :characters
+  end
   
   root'characters#index'
 
